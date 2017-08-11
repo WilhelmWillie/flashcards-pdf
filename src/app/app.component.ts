@@ -8,8 +8,20 @@ import jsPDF from 'jspdf';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cards = []
-
+  cards = [
+  {
+    term: 'Java',
+    definition: 'A programming language that is also the name of coffee'
+  },
+  {
+    term: 'Python',
+    definition: 'Programming language named after a snake'
+  },
+  {
+    term: 'C++',
+    definition: 'A very interesting language that\'s kind of a pain'
+  }]
+  
   generatePDF() {
     let doc = new jsPDF();
 

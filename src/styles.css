@@ -2,12 +2,16 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 16px;
+}
+
+body {
+  background: #F44E3F;
 }
 
 .container {
   width: 93.75%;
-  max-width: 960px;
-  margin: 20px auto;
+  max-width: 720px;
+  margin: 30px auto;
 }

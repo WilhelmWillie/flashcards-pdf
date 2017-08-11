@@ -1,9 +1,15 @@
-<form>
-  <label>Term</label>
-  <input type="text" [(ngModel)]="newTerm" name="term">
+<form class="card-form">
+  <div class="input-group">
+    <label>Term</label>
+    <input type="text" [(ngModel)]="newTerm" name="term">
+  </div>
 
-  <label>Definition</label> 
-  <input type="text" [(ngModel)]="newDefinition" name="definition">
+  <div class="input-group">
+    <label>Definition</label> 
+    <textarea [(ngModel)]="newDefinition" name="definition"></textarea>
+  </div>
 
-  <button (click)="formSubmit()">Add Card</button>
+  <button (click)="formSubmit()" class="add-card-btn">Add Card</button>
+
+  <div class="clear"></div>
 </form>

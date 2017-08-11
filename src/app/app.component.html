@@ -1,21 +1,26 @@
-<div class="container">
-  <div class="page-header">
+<div class="page-header">
+  <div class="container">
     <h1>Lightning Flashcards</h1>
-    <h2>Create a set of flashcards to printout and practice with</h2>
+    <h2>Create a set of flashcards to printout and study with</h2>
   </div>
+</div>
 
+<div class="container">
+  <card-form (addCard)="addCard($event)"></card-form>
+  
   <!-- Show flashcards -->
   <div class="flashcards">
     <!-- Show empty message if there are no cards -->
-    <p *ngIf="cards.length === 0">There are no flashcards in this set. Add some!</p>
+    <h2 *ngIf="cards.length === 0" class="empty-set">
+      This set is empty. Add some cards!
+    </h2>
 
     <flashcard 
       [card]="card"
       *ngFor="let card of cards"
+      class="flashcard"
     ></flashcard>
-  </div>
-
-  <card-form (addCard)="addCard($event)"></card-form>
-
-  <button (click)="generatePDF()">Generate PDF</button>
+  </div> 
 </div>
+
+<button (click)="generatePDF()" class="generate-pdf">Generate PDF</button>

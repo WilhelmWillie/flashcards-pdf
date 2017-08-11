@@ -1,0 +1,50 @@
+.card-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-group label {
+  width: 30%;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.input-group textarea, .input-group input {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1.15em;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.add-card-btn {
+  font-size: 1.15em;
+  padding: 15px 25px;
+  border-radius: 2px;
+  background: #1460A3;
+  color: #fff;
+  font-size: 1em;
+  display: flex;
+  border: none;
+  align-content: center;
+  justify-content: center;
+  transition: 0.3s all;
+  cursor: pointer;
+  float: right;
+}
+
+.clear {
+  clear: both;
+}

@@ -1,4 +1,21 @@
 <div>
   <h1>Flashcards PDF</h1>
   <p>Let's generate a PDF for flashcards</p>
+
+  <ul>
+    <li *ngFor="let card of cards">
+      <b>Term:</b> {{ card.term }}
+      <b>Definition:</b> {{ card.definition }}
+    </li>
+  </ul>
+
+  <label>Term</label>
+  <input type="text" [(ngModel)]="newTerm">
+
+  <label>Definition</label> 
+  <input type="text" [(ngModel)]="newDefinition">
+
+  <button (click)="addCard()">Add Card</button>
+
+  <button (click)="generatePDF()">Generate PDF</button>
 </div>

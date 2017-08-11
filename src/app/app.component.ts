@@ -8,9 +8,35 @@ import jsPDF from 'jspdf';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {
+  newTerm: string = '';
+  newDefinition: string= '';
+
+  cards = [
+    {
+      term: 'Blueberry',
+      definition: 'A blue fruit.'
+    },
+    {
+      term: 'Fish',
+      definition: 'An animal that can swim.'
+    }
+  ]
+
+  generatePDF() {
     let doc = new jsPDF();
-    doc.text("Hello", 20, 20);
-    doc.save("basic.pdf");
+
+    for(let i=0;i<this.cards.length;i++) {
+      let print = this.cards[i].term + ": " + this.cards[i].definition;
+      doc.text(10, i*10+10, print);
+    }
+
+    doc.save("terms.pdf");
+  }
+
+  addCard() {
+    this.cards.push({
+      term: this.newTerm,
+      definition: this.newDefinition
+    })
   }
 }

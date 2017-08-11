@@ -9,13 +9,7 @@
       ></flashcard>
   </div>
 
-  <label>Term</label>
-  <input type="text" [(ngModel)]="newTerm">
-
-  <label>Definition</label> 
-  <input type="text" [(ngModel)]="newDefinition">
-
-  <button (click)="addCard()">Add Card</button>
+  <card-form (addCard)="addCard($event)"></card-form>
 
   <button (click)="generatePDF()">Generate PDF</button>
 </div>

@@ -1,3 +1,9 @@
-<p>
-  card-form works!
-</p>
+<form>
+  <label>Term</label>
+  <input type="text" [(ngModel)]="newTerm" name="term">
+
+  <label>Definition</label> 
+  <input type="text" [(ngModel)]="newDefinition" name="definition">
+
+  <button (click)="formSubmit()">Add Card</button>
+</form>

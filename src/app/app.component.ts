@@ -8,9 +8,6 @@ import jsPDF from 'jspdf';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newTerm: string = '';
-  newDefinition: string= '';
-
   cards = [
     {
       term: 'Blueberry',
@@ -33,10 +30,10 @@ export class AppComponent {
     doc.save('cards.pdf');
   }
 
-  addCard() {
+  addCard(data) {
     this.cards.push({
-      term: this.newTerm,
-      definition: this.newDefinition
+      term: data.term,
+      definition: data.definition
     })
   }
 }

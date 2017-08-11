@@ -2,12 +2,12 @@
   <h1>Flashcards PDF</h1>
   <p>Let's generate a PDF for flashcards</p>
 
-  <ul>
-    <li *ngFor="let card of cards">
-      <b>Term:</b> {{ card.term }}
-      <b>Definition:</b> {{ card.definition }}
-    </li>
-  </ul>
+  <div class="flashcards">
+      <flashcard 
+        [card]="card"
+        *ngFor="let card of cards"
+      ></flashcard>
+  </div>
 
   <label>Term</label>
   <input type="text" [(ngModel)]="newTerm">

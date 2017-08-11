@@ -21,6 +21,10 @@ export class CardFormComponent implements OnInit {
       term: this.newTerm,
       definition: this.newDefinition
     });
+
+    // Reset form
+    this.newTerm = "";
+    this.newDefinition = "";
   }
 
 }

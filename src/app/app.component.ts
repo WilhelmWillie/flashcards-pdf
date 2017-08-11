@@ -8,16 +8,7 @@ import jsPDF from 'jspdf';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  cards = [
-    {
-      term: 'Blueberry',
-      definition: 'A blue fruit.'
-    },
-    {
-      term: 'Fish',
-      definition: 'An animal that can swim.'
-    }
-  ]
+  cards = []
 
   generatePDF() {
     let doc = new jsPDF();

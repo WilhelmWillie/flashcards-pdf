@@ -30,7 +30,7 @@ export class AppComponent {
       doc.text(10, i*10+10, print);
     }
 
-    doc.save("terms.pdf");
+    doc.save('cards.pdf');
   }
 
   addCard() {

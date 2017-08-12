@@ -25,10 +25,14 @@ export class AppComponent {
   generatePDF() {
     let doc = new jsPDF();
 
+    /*
     for(let i=0;i<this.cards.length;i++) {
       let print = this.cards[i].term + ": " + this.cards[i].definition;
       doc.text(10, i*10+10, print);
     }
+    */
+
+    doc.fromHTML(document.querySelector('.flashcards').innerHTML)
 
     doc.save('cards.pdf');
   }

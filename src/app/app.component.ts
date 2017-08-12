@@ -12,16 +12,16 @@ import * as html2canvas from 'html2canvas';
 export class AppComponent {
   cards = [
   { 
-    term: 'Java',
-    definition: 'A programming language that is also the name of coffee'
+    term: 'Normal Good',
+    definition: 'A good for which demand increases as income rises and decreases as income falls'
   },
   {
-    term: 'Python',
-    definition: 'Programming language named after a snake'
+    term: 'Inferior Good',
+    definition: 'A good for which demand decreases as income rises and increases as income falls'
   },
   {
-    term: 'C++',
-    definition: 'A very interesting language that\'s kind of a pain'
+    term: 'Giffen Good',
+    definition: 'A type of inferior good where demand increases as price of a good increases (violates the basic law of demand in microeconomics)'
   }]
   
   generatePDF() {
